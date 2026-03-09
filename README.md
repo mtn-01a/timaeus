@@ -1,3 +1,1 @@
-Timaeus Project
-
-by MTN-01A
+Timaeus Project  by MTN-01A
