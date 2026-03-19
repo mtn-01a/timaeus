@@ -2,16 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>TITLE</title>
     <style>
-        body {
+        html, body {
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
+            /* Используем 100% вместо 100vh, чтобы избежать проблем с адресной строкой */
+            overflow: hidden;
+            /* Отключаем скролл полностью */
+        }
+        
+        body {
             background: black;
-            min-height: 100vh;
-            display: grid;
-            place-items: center;
+            display: flex;
+            /* Используем flex вместо grid для лучшей совместимости */
+            justify-content: center;
+            /* Центрирование по горизонтали */
+            align-items: center;
+            /* Центрирование по вертикали */
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
         }
         
@@ -22,6 +33,10 @@
             text-align: center;
             word-break: break-word;
             padding: 20px;
+            max-width: 100%;
+            /* Чтобы текст не выходил за границы */
+            box-sizing: border-box;
+            /* Паддинг включается в ширину */
         }
     </style>
 </head>
